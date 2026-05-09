@@ -12,4 +12,9 @@ describe('String Calculator', function() {
 	it('should return 1 for a string of "1"', function() {
 		expect(calculator.add('1')).toEqual(1);
 	});
+
+	// TC_3
+	it('should return 3 for a string of "1,2"', function() {
+		expect(calculator.add('1,2')).toEqual(3);
+	});
 });
