@@ -1,17 +1,21 @@
 // StringCalculator.js
 function StringCalculator() {}
 StringCalculator.prototype.add = function(string_numbers) {
-	if (string_numbers.includes(',')) {
-		if (string_numbers.length > 5) {
-			result = parseInt(string_numbers.split(',')[0]) + parseInt(string_numbers.split(',')[1]) + parseInt(string_numbers.split(',')[2]);
-		}
-		else {
-			result = parseInt(string_numbers.split(',')[0]) + parseInt(string_numbers.split(',')[1]);
-		}
-	} else if (string_numbers.length > 0) {
-		result = parseInt(string_numbers);
-	} else if (string_numbers.length == 0) {
+	if (string_numbers.length == 0) {
 		return 0;
 	}
+
+	var result = 0;
+
+	if (string_numbers.includes(',')) {
+		var numbers = string_numbers.split(',');
+
+		for(var i = 0; i < numbers.length; i++) {
+			result += parseInt(numbers[i]);
+		}
+	} else {
+		result = parseInt(string_numbers);
+	}
+
 	return result;
 };
