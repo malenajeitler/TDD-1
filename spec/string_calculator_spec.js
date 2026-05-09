@@ -21,5 +21,10 @@ describe('String Calculator', function() {
 	//TC_4
 	it('should return 28 for a string of "1,27"', function() {
 		expect(calculator.add('1,27')).toEqual(28);
-	})
+	});
+
+	//TC_5
+	it('should return 53 for a string of "15,17,21"', function() {
+		expect(calculator.add('15,17,21')).toEqual(53);
+	});
 });
