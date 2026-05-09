@@ -11,7 +11,11 @@ StringCalculator.prototype.add = function(string_numbers) {
 		var numbers = string_numbers.split(',');
 
 		for(var i = 0; i < numbers.length; i++) {
-			result += parseInt(numbers[i]);
+			var value = parseInt(numbers[i]);
+			
+            if (!isNaN(value)) {
+                result += value;
+            }
 		}
 	} else {
 		result = parseInt(string_numbers);
