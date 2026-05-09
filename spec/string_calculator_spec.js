@@ -32,4 +32,9 @@ describe('String Calculator', function() {
 	it('should return 78 for a string of "1,5,27,45"', function() {
 		expect(calculator.add('1,5,27,45')).toEqual(78);
 	});
+
+	//TC_7
+	it('should return 11111 for a string of "1,10,100,1000,10000"', function() {
+		expect(calculator.add('1,10,100,1000,10000')).toEqual(11111);
+	});
 });
